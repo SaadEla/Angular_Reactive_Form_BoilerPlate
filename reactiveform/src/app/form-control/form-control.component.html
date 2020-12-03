@@ -1,0 +1,10 @@
+
+<div class="formcontrol">
+    <label>Form Control</label>
+    <input type="text" class="form-control" required [formControl]="name" (change)='edit()'>
+    <small class="text-muted text-danger">{{name.value}}</small>
+    <div>
+      <button class="btn btn-primary" type="submit" (click)="edit()">Edit form</button>
+      <button class="btn btn-primary" type="submit" (click)="reset()">Reset form</button>
+    </div>
+</div>

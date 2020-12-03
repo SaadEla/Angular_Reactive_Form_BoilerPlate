@@ -1,0 +1,21 @@
+@import '../../assets/styles/mixins.styles.scss';
+@import '../../assets/styles/variables.styles.scss';
+
+
+.formcontrol{
+    width: fit-content;
+    margin: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    input{
+        &:focus{
+            @include focusbtn;
+            border: 1px solid $grey;
+        }
+    }
+    button{
+        margin: 20px 10px 0px 0px;
+    }
+
+    
+}

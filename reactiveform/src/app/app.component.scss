@@ -1,0 +1,13 @@
+@import '../assets/styles/mixins.styles.scss';
+@import '../assets/styles/variables.styles.scss';
+
+ul{
+    padding: 50px 30px;
+    li{
+        cursor: pointer;
+        &:focus{
+            @include focusbtn;
+            border: 1px solid $grey;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import './variables.styles.scss';
+
+
+
+//delete shadow on button focusable
+@mixin focusbtn {
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
