@@ -1,0 +1,13 @@
+@import '../../assets/styles/mixins.styles.scss';
+@import '../../assets/styles/variables.styles.scss';
+
+form{
+    padding: 30px;
+    input{
+        &:focus{
+            @include focusbtn;
+            border: 1px solid $grey;
+        }
+        
+    }
+}

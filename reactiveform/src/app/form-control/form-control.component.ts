@@ -19,8 +19,14 @@ export class FormControlComponent implements OnInit {
     this.name.setValue('edited value')
   }
   reset(){
+    console.warn(this.name);
     //Resets the form control, marking it pristine and untouched, and setting the value to null
     this.name.reset()
+    //reset the form control with options
+    this.name.reset({ value: 'Drew', disabled: true });
+  }
+  updateName() {
+    this.name.setValue('Nancy');
   }
 
 }

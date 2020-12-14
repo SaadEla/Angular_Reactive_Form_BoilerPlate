@@ -11,7 +11,7 @@
         <small class="text-muted text-danger"> </small>
       </div>
     </div>
-    <div class="form-row">
+    <div class="form-row" formGroupName="address">
       <div class="col-md-6 mb-3">
         <label>City</label>
         <input type="text" class="form-control"  required formControlName="city">
@@ -40,5 +40,6 @@
         <small class="text-muted text-danger"> </small>
       </div>
     </div>
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-primary" type="submit" [disabled]="!userForm.valid">Submit form</button>
+    <button class="btn btn-primary m-5" type="submit" (click)='edit()' >Edit input s</button>
   </form>

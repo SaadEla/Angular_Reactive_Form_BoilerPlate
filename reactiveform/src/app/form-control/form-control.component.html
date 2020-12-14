@@ -1,7 +1,8 @@
 
 <div class="formcontrol">
     <label>Form Control</label>
-    <input type="text" class="form-control" required [formControl]="name" (change)='edit()'>
+    <!--The form controle is like ngmodel double vind the field to its param-->
+    <input type="text" class="form-control" required [formControl]="name">
     <small class="text-muted text-danger">{{name.value}}</small>
     <div>
       <button class="btn btn-primary" type="submit" (click)="edit()">Edit form</button>

@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormControlComponent } from './form-control/form-control.component';
 import { FormGroupComponent } from './form-group/form-group.component';
+import { FormBuilderComponent } from './form-builder/form-builder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormControlComponent,
-    FormGroupComponent
+    FormGroupComponent,
+    FormBuilderComponent
   ],
   imports: [
     BrowserModule,
