@@ -10,9 +10,9 @@ export class BuildformService {
 
   hasError(fbInstance, field, subformgrp?){
     if(field in fbInstance.controls){
-      return fbInstance.controls[field].errors && (fbInstance.controls[field].dirty || fbInstance.controls[field].touched)
+      return fbInstance.controls[field].errors && fbInstance.controls[field].touched
     }else{
-      return fbInstance.controls[subformgrp].controls[field].errors && (fbInstance.controls[subformgrp].controls[field].dirty || fbInstance.controls[subformgrp].controls[field].touched)
+      return fbInstance.controls[subformgrp].controls[field].errors && fbInstance.controls[subformgrp].controls[field].touched
     }
     
   }
