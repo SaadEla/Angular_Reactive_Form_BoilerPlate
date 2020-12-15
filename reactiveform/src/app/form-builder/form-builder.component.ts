@@ -51,9 +51,9 @@ export class FormBuilderComponent implements OnInit {
   hasError(field, subformgrp?){
     return this._formservice.hasError(this.userForm, field, subformgrp)
   }
-  ErrorDisplayer(field, validatorValue?, subformgrp?){
+  ErrorDisplayer(field, validatorValue?){
     let errorMsg;
-    let errorObject = field in this.userForm.controls ? this.userForm.controls[field].errors : this.address.controls[field].errors
+    let errorObject = field in this.userForm.controls ? this.userForm.controls[field].errors : this.userForm['controls'].address['controls'][field].errors
     if(errorObject){
       Object.keys(errorObject).forEach(key => {
         errorMsg = this._formservice.getValidatorErrorMessage(key, validatorValue);
@@ -64,6 +64,7 @@ export class FormBuilderComponent implements OnInit {
     }
   }
   //get accessor to get the formbuilder nested inside another one and to avoid Property 'controls' does not exist on type 'AbstractControl'. error
+  //['controls'] also work
   get address() {
     return this.userForm.get('address') as FormArray;
   }
