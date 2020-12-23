@@ -24,7 +24,7 @@ export class FormBuilderComponent implements OnInit {
       country: ['', Validators.required],
       zipcode: ['', Validators.required],
     }),
-    agreeterms: ['', Validators.required],
+    agreeterms: ['', Validators.requiredTrue],
   });
   
   ngOnInit(): void {
@@ -33,7 +33,7 @@ export class FormBuilderComponent implements OnInit {
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    console.log(this.userForm.value);
+    console.log(this.userForm);
   }
   edit(){
     console.log(this.userForm.value);
